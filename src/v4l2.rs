@@ -22,6 +22,7 @@ mod ll {
     pub use self::v4l2_open as open;
 
     #[link(name = "v4l2")]
+    #[link(name = "v4lconvert")]
     extern "C" {
         pub fn v4l2_open(file: *const c_char, flags: c_int, arg: c_int) -> RawFd;
         pub fn v4l2_close(fd: RawFd) -> c_int;
