@@ -23,6 +23,7 @@ mod ll {
 
     #[link(name = "v4l2")]
     #[link(name = "v4lconvert")]
+    #[link(name = "jpeg")]
     extern "C" {
         pub fn v4l2_open(file: *const c_char, flags: c_int, arg: c_int) -> RawFd;
         pub fn v4l2_close(fd: RawFd) -> c_int;
